@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("nav-toggle").addEventListener("click", function () {
     document.getElementById("nav-toggle").classList.toggle("active");
     document.getElementById("navbar").classList.toggle("active");
-  });
+  }, false);
   document.getElementById("nav-toggle").addEventListener("keydown", function (event) {
     var KEY_ENTER = 13;
     var KEY_SPACE = 32;
@@ -72,5 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("navbar").classList.toggle("active");
       }
     }
-  });
+  }, false);
 });
