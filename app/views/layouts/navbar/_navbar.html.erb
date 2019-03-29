@@ -6,7 +6,7 @@
   <div id="navbar" class="navbar" tabindex="0">
     <ul class="navbar__categories" tabindex="0">
       <% navbar_data.each do |node| %>
-        <li class="navbar__categories__list-item" tabindex="0">
+        <li class="navbar__categories__list-item" data-slug="<%= node[:slug] %>" tabindex="0">
           <% if node[:type] == 'top-level' %>
             <a class="navbar__categories__header" data-slug="<%= node[:slug]%>" href="<%= node[:link] %>"><%= node[:label] %></a>
           <% elsif node[:type] == 'single'%>

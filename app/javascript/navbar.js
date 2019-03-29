@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.target.matches(".navbar__link") || event.target.matches(".navbar__categories__list-item")) {
         var list = document.querySelectorAll(".navbar__category, .navbar__categories__header");
         for (var i = 0;i < list.length;i++) {
-          if (list[i].classList.contains(event.target.dataset.slug)) {
+          if (list[i].dataset.slug === event.target.dataset.slug) {
             list[i].classList.add("active");
           } else {
             list[i].classList.remove("active");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.target.matches(".navbar__categories__header") || event.target.matches(".navbar__categories__list-item")) {
         var list = document.querySelectorAll(".navbar__category, .navbar__categories__header");
         for (var i = 0;i < list.length;i++) {
-          if (list[i].classList.contains(event.target.dataset.slug)) {
+          if (list[i].dataset.slug === event.target.dataset.slug) {
             list[i].classList.toggle("active");
           } else {
             list[i].classList.remove("active");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (event.target.matches(".navbar__categories__header") || event.target.matches(".navbar__categories__list-item")) {
             var list = document.querySelectorAll(".navbar__category, .navbar__categories__header");
             for (var i = 0;i < list.length;i++) {
-              if (list[i].classList.contains(event.target.dataset.slug)) {
+              if (list[i].dataset.slug === event.target.dataset.slug) {
                 list[i].classList.toggle("active");
               } else {
                 list[i].classList.remove("active");

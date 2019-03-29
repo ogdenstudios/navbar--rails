@@ -1,6 +1,6 @@
-<div class="navbar__multi-col-panel">
-  <span class="navbar__categories__header <%= data[:slug] %>" data-slug="<%= data[:slug]%>"><%= data[:label]%></span>
-  <ul class="navbar__multi-col navbar__category <%= data[:slug] %> ">
+<div class="navbar__multi-col-panel" data-slug="<%= data[:slug]%>">
+  <span class="navbar__categories__header" data-slug="<%= data[:slug]%>"><%= data[:label]%></span>
+  <ul class="navbar__multi-col navbar__category" data-slug="<%= data[:slug]%>">
     <% data[:nodes].each do |node|%>
       <li>
         <span><%= node[:label] %></span>
