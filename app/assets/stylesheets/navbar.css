@@ -18,7 +18,7 @@ nav ul {
     position: absolute;
     z-index: -9999;
 }
-.navbar__category.active {
+.navbar__category--active {
     opacity: 1;
     z-index: 0;
 }
@@ -44,7 +44,6 @@ nav ul {
         position: absolute;
         display: block;
         content: "";
-        transition: all 300ms ease-in-out;
     }
     .nav-mobile .nav-toggle span:before {
         top: -10px;
@@ -52,17 +51,17 @@ nav ul {
     .nav-mobile .nav-toggle span:after {
         bottom: -10px;
     }
-    .nav-mobile .nav-toggle.active span {
+    .nav-mobile .nav-toggle--active span {
         background-color: transparent;
     }
-    .nav-mobile .nav-toggle.active span:before,
-    .nav-mobile .nav-toggle.active span:after {
+    .nav-mobile .nav-toggle--active span:before,
+    .nav-mobile .nav-toggle--active span:after {
         top: 0;
     }
-    .nav-mobile .nav-toggle.active span:before {
+    .nav-mobile .nav-toggle--active span:before {
         transform: rotate(45deg);
     }
-    .nav-mobile .nav-toggle.active span:after {
+    .nav-mobile .nav-toggle--active span:after {
         transform: rotate(-45deg);
     }
     .navbar {
@@ -70,7 +69,7 @@ nav ul {
         position: absolute;
         z-index: -9999;
     }
-    .navbar.active {
+    .navbar--active {
         opacity: 1;
         z-index: 0;
     }
@@ -80,7 +79,7 @@ nav ul {
     .navbar__categories__header {
         padding-left: 0;
     }
-    .navbar__category.active {
+    .navbar__category--active {
         position: relative;
     }
     .multi-col__category {
