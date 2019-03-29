@@ -79,5 +79,5 @@ module NavbarHelper
         ]
       }
     ]
-    end
+  end
 end
