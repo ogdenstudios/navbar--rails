@@ -2,32 +2,26 @@ nav ul {
     padding: 0;
     list-style: none;
 }
-
 .nav-mobile {
     display: none;
 }
-
 .navbar__categories {
     display: flex;
 }
-
 .navbar__categories__header {
     cursor: pointer;
     display: block;
     padding: 24px;
 }
-
 .navbar__category {
     opacity: 0;
     position: absolute;
     z-index: -9999;
 }
-
 .navbar__category.active {
     opacity: 1;
     z-index: 0;
 }
-
 @media all and (max-width: 768px) {
     .nav-mobile {
         display: block;
@@ -35,13 +29,13 @@ nav ul {
         z-index: 1;
         width: 50px;
     }
-    .nav-mobile #nav-toggle {
+    .nav-mobile .nav-toggle {
         cursor: pointer;
         padding: 10px 35px 16px 0;
     }
-    .nav-mobile #nav-toggle span,
-    .nav-mobile #nav-toggle span:before,
-    .nav-mobile #nav-toggle span:after {
+    .nav-mobile .nav-toggle span,
+    .nav-mobile .nav-toggle span:before,
+    .nav-mobile .nav-toggle span:after {
         background: #000000;
         cursor: pointer;
         border-radius: 1px;
@@ -52,23 +46,23 @@ nav ul {
         content: "";
         transition: all 300ms ease-in-out;
     }
-    .nav-mobile #nav-toggle span:before {
+    .nav-mobile .nav-toggle span:before {
         top: -10px;
     }
-    .nav-mobile #nav-toggle span:after {
+    .nav-mobile .nav-toggle span:after {
         bottom: -10px;
     }
-    .nav-mobile #nav-toggle.active span {
+    .nav-mobile .nav-toggle.active span {
         background-color: transparent;
     }
-    .nav-mobile #nav-toggle.active span:before,
-    .nav-mobile #nav-toggle.active span:after {
+    .nav-mobile .nav-toggle.active span:before,
+    .nav-mobile .nav-toggle.active span:after {
         top: 0;
     }
-    .nav-mobile #nav-toggle.active span:before {
+    .nav-mobile .nav-toggle.active span:before {
         transform: rotate(45deg);
     }
-    .nav-mobile #nav-toggle.active span:after {
+    .nav-mobile .nav-toggle.active span:after {
         transform: rotate(-45deg);
     }
     .navbar {
