@@ -1,0 +1,12 @@
+<div class="navbar__single-col-panel">
+  <span class="navbar__categories__header <%= data[:slug] %>" data-slug="<%= data[:slug]%>"><%= data[:label]%></span>
+  <ul class="navbar__single-col navbar__category <%= data[:slug] %>">
+    <% data[:nodes].each do |node|%>
+      <li class="navbar__category__item">
+        <a class="navbar__link" data-slug="<%= data[:slug]%>" href="<%= node[:link] %>">
+          <%= node[:label] %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

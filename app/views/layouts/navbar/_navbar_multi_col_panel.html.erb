@@ -1,0 +1,17 @@
+<div class="navbar__multi-col-panel">
+  <span class="navbar__categories__header <%= data[:slug] %>" data-slug="<%= data[:slug]%>"><%= data[:label]%></span>
+  <ul class="navbar__multi-col navbar__category <%= data[:slug] %> ">
+    <% data[:nodes].each do |node|%>
+      <li>
+        <span><%= node[:label] %></span>
+        <ul class="multi-col__category">
+          <% node[:nodes].each do |item| %>
+            <li class="multi-col__category__item">
+              <a class="navbar__link" data-slug="<%= data[:slug]%>"href="<%= item[:link] %>" ><%= item[:label] %></a>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>
