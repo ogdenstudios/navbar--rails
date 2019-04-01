@@ -1,5 +1,5 @@
 module NavbarHelper
-    def get_navbar_data
+  def get_navbar_data
     return data = [{
         label: 'Home',
         slug: 'home',
@@ -78,6 +78,6 @@ module NavbarHelper
           }
         ]
       }
-    ]
+    ] 
   end
 end
