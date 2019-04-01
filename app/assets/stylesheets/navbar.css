@@ -14,13 +14,11 @@ nav ul {
     padding: 24px;
 }
 .navbar__category {
-    opacity: 0;
     position: absolute;
-    z-index: -9999;
+    left: -9999px;
 }
 .navbar__category--active {
-    opacity: 1;
-    z-index: 0;
+    left: unset;
 }
 @media all and (max-width: 768px) {
     .nav-mobile {
@@ -65,13 +63,11 @@ nav ul {
         transform: rotate(-45deg);
     }
     .navbar {
-        opacity: 0;
         position: absolute;
-        z-index: -9999;
+        left: -9999px;
     }
     .navbar--active {
-        opacity: 1;
-        z-index: 0;
+        left: unset;
     }
     .navbar__categories {
         display: block;
