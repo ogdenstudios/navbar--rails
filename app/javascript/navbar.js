@@ -6,38 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("focus", function (event) {
     if (event.target.classList) {
       if (event.target.matches(".navbar__link") || event.target.matches(".navbar__categories__list-item")) {
-        var list = document.getElementsByClassName("navbar__category");
-        for (var i = 0;i < list.length;i++) {
-          if (list[i].dataset.slug === event.target.dataset.slug) {
-            list[i].classList.add("navbar__category--active");
-          } else {
-            list[i].classList.remove("navbar__category--active");
-          }
-        }
+        showNavbar(event.target.dataset.slug);
       }
     }
   }, true);
   document.addEventListener("blur", function (event) {
     if (event.target.classList) {
       if (event.target.matches(".navbar__link") || event.target.matches(".navbar__categories__list-item")) {
-        var list = document.getElementsByClassName("navbar__category");
-        for (var i = 0;i < list.length;i++) {
-          list[i].classList.remove("navbar__category--active");
-        }
+        hideNavbar();
       }
     }
   }, true);
   document.addEventListener("mousedown", function (event) {
     if (event.target.classList) {
       if (event.target.matches(".navbar__categories__header") || event.target.matches(".navbar__categories__list-item")) {
-        var list = document.getElementsByClassName("navbar__category");
-        for (var i = 0;i < list.length;i++) {
-          if (list[i].dataset.slug === event.target.dataset.slug) {
-            list[i].classList.toggle("navbar__category--active");
-          } else {
-            list[i].classList.remove("navbar__category--active");
-          }
-        }
+        toggleNavbar(event.target.dataset.slug);
       }
     }
   }, false);
@@ -49,14 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case KEY_SPACE: {
         if (event.target.classList) {
           if (event.target.matches(".navbar__categories__header") || event.target.matches(".navbar__categories__list-item")) {
-            var list = document.getElementsByClassName("navbar__category");
-            for (var i = 0;i < list.length;i++) {
-              if (list[i].dataset.slug === event.target.dataset.slug) {
-                list[i].classList.toggle("navbar__category--active");
-              } else {
-                list[i].classList.remove("navbar__category--active");
-              }
-            }
+            toggleNavbar(event.target.dataset.slug);
           }
         }
       }
@@ -78,3 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, false);
 });
+
+function showNavbar(slug) {
+  var list = document.getElementsByClassName("navbar__category");
+  for (var i = 0;i < list.length;i++) {
+    if (list[i].dataset.slug === slug) {
+      list[i].classList.add("navbar__category--active");
+    } else {
+      list[i].classList.remove("navbar__category--active");
+    }
+  }
+}
+function hideNavbar() {
+  var list = document.getElementsByClassName("navbar__category");
+  for (var i = 0;i < list.length;i++) {
+    list[i].classList.remove("navbar__category--active");
+  }
+}
+function toggleNavbar(slug) {
+  var list = document.getElementsByClassName("navbar__category");
+  for (var i = 0;i < list.length;i++) {
+    if (list[i].dataset.slug === slug) {
+      list[i].classList.toggle("navbar__category--active");
+    } else {
+      list[i].classList.remove("navbar__category--active");
+    }
+  }
+}
