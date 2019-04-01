@@ -4,7 +4,7 @@ module NavbarHelper
         label: 'Home',
         slug: 'home',
         type: 'top-level',
-        link: '/'
+        link: '#!'
       },
       {
         label: 'Single',
@@ -12,15 +12,15 @@ module NavbarHelper
         type: 'single',
         nodes: [{
             label: 'About',
-            link: '/about'
+            link: '#!'
           },
           {
             label: 'Contact',
-            link: '/contact'
+            link: '#!'
           },
           {
             label: 'Blog',
-            link: '/blog'
+            link: '#!'
           }
         ]
       },
@@ -32,11 +32,11 @@ module NavbarHelper
             label: 'Category 1',
             nodes: [{
                 label: 'Item 1',
-                link: '/category-1/item-1'
+                link: '#!'
               },
               {
                 label: 'Item 2',
-                link: '/category-1/item-2'
+                link: '#!'
               }
             ]
           },
@@ -44,19 +44,19 @@ module NavbarHelper
             label: 'Category 2',
             nodes: [{
                 label: 'Item 1',
-                link: '/category-2/item-1'
+                link: '#!'
               },
               {
                 label: 'Item 2',
-                link: '/category-2/item-2'
+                link: '#!'
               },
               {
                 label: 'Item 3',
-                link: '/category-2/item-3'
+                link: '#!'
               },
               {
                 label: 'Item 4',
-                link: '/category-2/item-4'
+                link: '#!'
               }
             ]
           },
@@ -64,15 +64,15 @@ module NavbarHelper
             label: 'Category 3',
             nodes: [{
                 label: 'Item 1',
-                link: '/category-3/item-1'
+                link: '#!'
               },
               {
                 label: 'Item 2',
-                link: '/category-3/item-2'
+                link: '#!'
               },
               {
                 label: 'Item 3',
-                link: '/category-3/item-3'
+                link: '#!'
               }
             ]
           }
