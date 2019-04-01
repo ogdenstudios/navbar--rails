@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, false);
 });
-
 function showNavbar(slug) {
   var list = document.getElementsByClassName("navbar__category");
   for (var i = 0;i < list.length;i++) {
