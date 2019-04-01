@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+      Element.prototype.webkitMatchesSelector;
+  }
   document.addEventListener("focus", function (event) {
     if (event.target.classList) {
       if (event.target.matches(".navbar__link") || event.target.matches(".navbar__categories__list-item")) {
